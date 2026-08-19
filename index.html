@@ -390,6 +390,129 @@ input[type=range]{
 .share-name span{ font-size:0.88rem; }
 .share-name .who{ color:var(--wind); font-family:'JetBrains Mono', monospace; font-size:0.72rem; margin-left:auto; }
 
+/* ===== GOALS ===== */
+.goals{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+.goal-card{
+  background:var(--cloud);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px;
+}
+.goal-flag{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.68rem;
+  padding:4px 10px;
+  border-radius:20px;
+  display:inline-block;
+  margin-bottom:16px;
+}
+.goal-flag.real{ color:var(--meadow); background:rgba(94,155,87,0.1); }
+.goal-flag.example{ color:var(--sky-deep); background:rgba(62,124,184,0.08); }
+.goal-title{
+  font-family:'Baloo 2', sans-serif;
+  font-size:1.2rem;
+  margin-bottom:14px;
+}
+.goal-bar-track{
+  height:8px;
+  background:var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:8px;
+}
+.goal-bar-fill{
+  height:100%;
+  background:var(--coral);
+  border-radius:10px;
+}
+.goal-amounts{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.76rem;
+  color:var(--wind);
+  margin-bottom:18px;
+  display:flex;
+  justify-content:space-between;
+}
+.goal-benefit{
+  font-size:0.9rem;
+  color:#3C4A63;
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+.goal-benefit b{ color:var(--navy); }
+
+/* ===== ECONOMICS ===== */
+.economics{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+.economics-copy h3{ font-size:1.5rem; margin-bottom:14px; }
+.economics-copy p{ color:#3C4A63; font-size:0.98rem; margin-bottom:20px; }
+.economics-list{ list-style:none; }
+.economics-list li{
+  display:flex;
+  gap:12px;
+  padding:12px 0;
+  border-top:1px solid var(--line);
+  font-size:0.92rem;
+}
+.economics-list li:first-child{ border-top:none; }
+.economics-list li::before{
+  content:'✓';
+  color:var(--meadow);
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.worked-example{
+  background:var(--navy);
+  border-radius:18px;
+  padding:30px;
+  color:var(--cloud);
+}
+.worked-example-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.72rem;
+  color:var(--wind);
+  margin-bottom:16px;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+}
+.worked-example-school{
+  font-family:'Baloo 2', sans-serif;
+  font-size:1.15rem;
+  margin-bottom:18px;
+}
+.calc-row{
+  display:flex;
+  justify-content:space-between;
+  padding:9px 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.85rem;
+  color:#C8D2E0;
+}
+.calc-row:first-of-type{ border-top:none; }
+.calc-row.total{
+  color:var(--cloud);
+  font-weight:600;
+  font-size:1rem;
+  border-top:1px solid rgba(255,255,255,0.2);
+  margin-top:4px;
+  padding-top:14px;
+}
+.worked-example-note{
+  font-size:0.78rem;
+  color:var(--wind);
+  margin-top:16px;
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonials{
   display:grid;
@@ -429,6 +552,24 @@ input[type=range]{
   padding:4px 10px;
   border-radius:20px;
   margin-bottom:18px;
+}
+.real-flag{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.68rem;
+  color:var(--meadow);
+  background:rgba(94,155,87,0.1);
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:20px;
+  margin-bottom:18px;
+}
+.testimonial-real{
+  grid-column:1 / -1;
+  max-width:640px;
+}
+.testimonial-real .testimonial-quote{
+  font-size:1.05rem;
+  line-height:1.6;
 }
 
 /* ===== STEPS ===== */
@@ -653,25 +794,70 @@ footer{
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">From other schools</div>
-      <h2>What PTAs say once they've run one</h2>
+      <div class="eyebrow">Say what it's for</div>
+      <h2>"Raising money for the PTA" is abstract. A named outcome isn't.</h2>
     </div>
-    <div class="illustrative-flag">ILLUSTRATIVE QUOTES — PLACEHOLDER UNTIL REAL TESTIMONIALS ARE AVAILABLE</div>
+    <p style="max-width:620px; color:#3C4A63; margin-bottom:32px; font-size:0.98rem;">A progress bar towards a generic fund doesn't give anyone a reason to buy in, or to pass the link on to family. A progress bar towards something a parent can picture for their own child does.</p>
+    <div class="goals">
+      <div class="goal-card">
+        <div class="goal-flag real">REAL GOAL — FAIRHAVEN PRIMARY</div>
+        <div class="goal-title">New screens for every classroom</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:3.4%;"></div></div>
+        <div class="goal-amounts"><span>£340 from the balloon race</span><span>of £10,000 campaign</span></div>
+        <div class="goal-benefit">Replacing ageing whiteboards with <b>interactive screens and visualisers</b>, so every class gets clearer, more hands-on lessons.</div>
+      </div>
+      <div class="goal-card">
+        <div class="goal-flag example">EXAMPLE GOAL</div>
+        <div class="goal-title">New playground equipment</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:52%;"></div></div>
+        <div class="goal-amounts"><span>£2,100 raised</span><span>of £4,000 target</span></div>
+        <div class="goal-benefit">Gets Reception and KS1 <b>outside and active every break</b>, not just when the current equipment's free.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The economics</div>
+      <h2>What actually lands in your account</h2>
+    </div>
+    <div class="economics">
+      <div class="economics-copy">
+        <h3>Nothing to pay before you start</h3>
+        <p>There's no set-up cost and no prizes to fund yourselves — the platform fee covers the weather engine, live tracking, and the prizes on offer.</p>
+        <ul class="economics-list">
+          <li>Balloons sell for £3 each, with no cap on how many you sell</li>
+          <li>Ecoracing takes a 24.8% platform fee from what's raised</li>
+          <li>The rest is paid out automatically by BACS 7 working days after the race ends</li>
+          <li>No invoicing, no statements to chase — it just lands in the account</li>
+        </ul>
+      </div>
+      <div class="worked-example">
+        <div class="worked-example-label">Worked example</div>
+        <div class="worked-example-school">Fairhaven Primary, Stourbridge</div>
+        <div class="calc-row"><span>200 balloons × £3</span><span>£600.00</span></div>
+        <div class="calc-row"><span>Platform fee (24.8%)</span><span>−£148.80</span></div>
+        <div class="calc-row total"><span>Landed in the PTA account</span><span>£451.20</span></div>
+        <div class="worked-example-note">Figure from Ecoracing's published race guide, based on one of the school's actual races.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">From a real school</div>
+      <h2>What it looked like at Fairhaven Primary</h2>
+    </div>
+    <div class="real-flag">REAL CASE STUDY — FAIRHAVEN PRIMARY, STOURBRIDGE (306 PUPILS)</div>
     <div class="testimonials">
-      <div class="testimonial">
-        <div class="testimonial-quote">"We sent the link to family who live nowhere near the school. Half our top balloons weren't bought by parents at the gate at all."</div>
-        <div class="testimonial-who">PTA Chair</div>
-        <div class="testimonial-role">Sample primary school</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote">"The kids kept asking to check the leaderboard before school. A raffle never got that kind of attention for a whole week."</div>
-        <div class="testimonial-who">PTA Treasurer</div>
-        <div class="testimonial-role">Sample primary school</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote">"It took less effort to set up than our last bag pack, and it kept raising money after we'd stopped actively asking."</div>
-        <div class="testimonial-who">PTA Fundraising Lead</div>
-        <div class="testimonial-role">Sample secondary school</div>
+      <div class="testimonial testimonial-real">
+        <div class="testimonial-quote">The school set up its race page in minutes with no set-up fees, then sold 139 balloons in just a few days — including a last-minute rush of parents buying on their phones outside the gates on launch day. The headteacher opened the school early so children could watch the launch on a big screen, and pupils spent the week checking their balloons' progress, which the school found boosted their geography awareness too. It's now become an annual event for the school.</div>
+        <div class="testimonial-who">Tom Garner, Headteacher</div>
+        <div class="testimonial-role">Fairhaven Primary School, Stourbridge — via funded.org.uk</div>
       </div>
     </div>
   </div>
